@@ -16,7 +16,6 @@ import { IconPicker } from "./icon-picker";
 interface ToolbarProps {
   initialData: Doc<"documents">;
   preview?: boolean;
-  // documentId: Id<"documents">
 };
 
 import {
