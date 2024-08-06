@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { useCoverImage } from "@/hooks/use-cover-image";
 // import { SingleImageDropzone } from "@/components/single-image-dropzone";
-// import { useEdgeStore } from "@/lib/edgestore";
+import { useEdgeStore } from "@/lib/edgestore";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { SingleImageDropzone } from "../single-image-dropzone";
@@ -20,7 +20,7 @@ export const CoverImageModal = () => {
   const params = useParams();
   const update = useMutation(api.documents.update);
   const coverImage = useCoverImage();
-//   const { edgestore } = useEdgeStore();
+  const { edgestore } = useEdgeStore();
   
   const [file, setFile] = useState<File>();
   const [isSubmitting, setIsSubmitting] = useState(false);
