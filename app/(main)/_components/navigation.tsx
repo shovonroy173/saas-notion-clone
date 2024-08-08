@@ -53,14 +53,14 @@ export const Navigation = () => {
   const params = useParams();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
-  console.log("LINE AT 41", search.isOpen);
+  // console.log("LINE AT 41", search.isOpen);
 
   const isResizingRef = useRef(false);
   const sidebarRef = useRef<ElementRef<"aside">>(null);
   const navbarRef = useRef<ElementRef<"div">>(null);
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
-
+// eslintreact-hooks/exhaustive-deps
   useEffect(() => {
     if (isMobile) {
       collapse();
